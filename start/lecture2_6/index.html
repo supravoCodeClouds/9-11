@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../css/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../css/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../css/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../css/favicon/site.webmanifest">
+  <link rel="mask-icon" href="../../css/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Lecture 2.6</title>
+</head>
+
+<body>
+  <script>
+    //Place your code here
+    const npcs = [];
+
+    npcs.push(createNPC()); //call the function createNPC and push it to npc
+    npcs.push(createNPC());
+    npcs.push(createNPC());//we create 3 objects for npcs and push it one by one
+
+    function createNPC(){
+      const power = Math.random()*0.5 + 0.5; //produces a number netween 0.5 and 1.
+      //multiplying by 0.5 scales range between 0-0.5 and adding 0.5 scales it to 0.5-1.0
+      const weapons = ["sword","pistol","axe","spear"];
+      const weapon = weapons[Math.floor(Math.random()*weapons.length)];
+
+      const strength = Math.random()*2.0+1.0;
+      const damage = 0;
+
+      return {power, weapon, strength, damage};
+    }
+  </script> 
+</body>
+
+</html>
